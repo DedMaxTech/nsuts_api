@@ -52,7 +52,6 @@ asyncio.run(main())
 
 Создано исключительно в образовательный целях, **ни в коем случае не пытайтесь дудосить или брутфорсить** `nsuts`
 
-
 ## Установка
 
 * Скачиваем репозиторий
@@ -71,45 +70,88 @@ asyncio.run(main())
 
 ## Список всех методов
 
-* User.submit(self, task: str, lang: str, code: str) -> dict
+Подробное описание всех аргументов смотрите в докстрингах
+
+* ```python
+  User.submit(self, task: str, lang: str, code: str) -> dict
+  ```
 
   Отправить код на проверку
-* User.get_rating(self) -> dict
+
+* ```python
+  User.get_rating(self) -> dict
+  ```
 
   Получить общий рейтинг по туру
-* User.get_tour_report(self) -> dict
+
+* ```python
+  User.get_tour_report(self) -> dict
+  ```
 
   Получить отчёт по туру
-* User.submit_info(self) -> dict
+
+* ```python
+  User.submit_info(self) -> dict
+  ```
 
   Получить параметры тура по отправке
-* User.set_tour(self, tour: str) -> dict
+
+* ```python
+  User.set_tour(self, tour: str) -> dict
+  ```
 
   "Переключится" на тур (особенность нсутса)
-* User.list_tours(self) -> dict
+
+* ```python
+  User.list_tours(self) -> dict
+  ```
 
   Список всех туров
-* User.get_data(self) -> dict
+
+* ```python
+  User.get_data(self) -> dict
+  ```
 
   Получить данные аккаунта
-* User.set_olympiad(self, olympiad: str)
+
+* ```python
+  User.set_olympiad(self, olympiad: str)
+  ```
 
   "Переключится" на олимпиаду (особенность нсутса)
-* User.register_olympiad(self, olympiad: str, team: str, city: str = None, school: str = None, group: str = None, surname: str = None, name: str = None, patronymic: str = None) -> str
+
+* ```python
+  User.register_olympiad(self, olympiad: str, team: str, city: str = None, school: str = None, group: str = None, surname: str = None, name: str = None, patronymic: str = None) -> str
+  ```
 
   Зарегестирироваться на олимпиаду
-* User.list_olympiads(self) -> dict
+
+* ```python
+  User.list_olympiads(self) -> dict
+  ```
 
   Список всех олимпиад
-* User.logout(self) -> dict
+
+* ```python
+  User.logout(self) -> dict
+  ```
 
   Выйти из аккаунта и разорвать соединение
-* User.create(cls, surname: str, name: str, patronymic: str, email: str = None, password: str = None, email_sub='@mer.ci.nsu.ru') -> 'User'
+
+* ```python
+  User.create(cls, surname: str, name: str, patronymic: str, email: str = None, password: str = None, email_sub='@mer.ci.nsu.ru') -> 'User'
+  ```
 
   Создать аккаунт пользователя
-* User.register(cls, surname: str, name: str, patronymic: str, email: str = None, password: str = None, email_sub='@mer.ci.nsu.ru') -> tuple[str, str]
+
+* ```python
+  User.register(cls, surname: str, name: str, patronymic: str, email: str = None, password: str = None, email_sub='@mer.ci.nsu.ru') -> tuple[str, str]
+  ```
 
   Регистация пользователя
-* User.login(cls, email: str, password: str) -> str
+
+* ```python
+  User.login(cls, email: str, password: str) -> str
+  ```
 
   Вход в аккаунт
